@@ -1,0 +1,6 @@
+application:
+  server:
+    host: localhost
+    port: 8001
+database:
+  url: postgresql://postgres:dark0407@localhost:5432/blog
