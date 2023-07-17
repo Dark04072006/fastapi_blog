@@ -7,7 +7,7 @@ from app.core.database import database
 
 app: FastAPI = FastAPI()
 
-app.include_router(router)
+app.include_router(router, prefix='/api/posts', tags=['posts'])
 
 @app.on_event('startup')
 async def on_startup():

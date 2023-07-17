@@ -2,7 +2,7 @@ from app.blog import crud
 from fastapi import APIRouter
 from app.blog.schemas import PostInSchema, PostOutSchema
 
-router = APIRouter(prefix='/api/posts', tags=['posts'])
+router = APIRouter()
 
 
 @router.get('/', status_code=200, response_model=list[PostOutSchema],

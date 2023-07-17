@@ -16,15 +16,15 @@ async def get_single_post(user_id: int) -> PostOutSchema:
 
 
 async def create_post(item: PostInSchema) -> PostOutSchema:
-    post = posts.insert().values(**item.model_dump())
+    post = posts.insert().values(**item.dict())
     post_id = await database.execute(post)
-    result = {'id': post_id, **item.model_dump()}
+    result = {'id': post_id, **item.dict()}
     return PostOutSchema(**result)
 
 
 async def update_post(post_id: int, item: PostInSchema) -> PostOutSchema:
     post = posts.update().where(posts.c.id == post_id).values(
-        **item.model_dump()
+        **item.dict()
     )
     await database.execute(post)
     return await database.fetch_one(query=posts.select().where(
