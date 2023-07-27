@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "blogg"
+version = "0.1.0"
+description = ""
+authors = ["dark <abrekovalim38702@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = {extras = ["all"], version = "^0.100.0"}
+sqlalchemy = {extras = ["asyncio"], version = "^2.0.19"}
+asyncpg = "^0.28.0"
+alembic = "^1.11.1"
+fastapi-users = {extras = ["sqlalchemy"], version = "^12.1.0"}
+sqladmin = "^0.13.0"
+flask-admin = "^1.6.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
