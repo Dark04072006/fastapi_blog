@@ -1,5 +1,5 @@
 from sqlalchemy import String, ForeignKey
-from sqlalchemy.orm import mapped_column, Mapped, relationship, declarative_mixin, declared_attr
+from sqlalchemy.orm import Mapped, declarative_mixin, mapped_column
 
 
 @declarative_mixin
